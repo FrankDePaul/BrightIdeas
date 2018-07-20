@@ -1,0 +1,56 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+ <a class="nav-link" href="/Logout">Logout</a>
+  <a class="nav-link" href="/Ideas">BrightIdeas</a>
+  
+</nav>
+@model ViewModel
+
+
+
+
+<table class="table">
+    <tbody>
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Name:</th>
+          <td>@ViewBag.CreatorProfile.Name</td>
+        </tr>
+        <tr>
+          <th scope="row">Alias:</th>
+          <td>@ViewBag.CreatorProfile.Alias</td>
+        </tr>
+        <tr>
+          <th scope="row">Email:</th>
+          <td>@ViewBag.CreatorProfile.Email</td>
+        </tr>
+          <tr>
+          <th scope="row">Total Number of Posts:</th>
+          <td>@ViewBag.Totalposts</td>
+        </tr>
+          </tr>
+          <tr>
+          <th scope="row">Total Number of Likes:</th>
+          <td>@ViewBag.Totallikes</td>
+        </tr>
+
+
+
+
+
+      </tbody>
+      
+
+
+
+
+    </tbody>
+
+
+</table>
+

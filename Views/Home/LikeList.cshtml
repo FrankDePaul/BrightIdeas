@@ -1,0 +1,54 @@
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+ <a class="nav-link" href="/Logout">Logout</a>
+  <a class="nav-link" href="/Ideas">BrightIdeas</a>
+  
+</nav>
+<a href="/Profile/@ViewBag.User.Id" >@ViewBag.User.Alias </a> says:
+
+<div class="ideabox">@ViewBag.Idea.Content</div>
+
+
+
+
+
+<table class="table">
+   
+        <thead>
+            <tr>
+                <h3>People who liked this post:</h3>
+                <th scope="col">Alias</th>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+    @foreach(var idea in @ViewBag.Idealist)
+    {
+        
+        @foreach(var liker in @idea.Likers)
+        {
+            <tr>
+            <td>@liker.Liker.Name</td>
+            <td><a href="/Profile/@liker.Liker.Id" >@liker.Liker.Alias </a></td>
+            </tr>
+        }
+
+
+    
+
+        
+    }
+    </tbody>
+</table>
+
+<style>
+    .ideabox{
+        width: 200px;
+        height: 100px;
+        border: solid black 1px;
+    }
+
+</style>

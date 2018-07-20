@@ -1,0 +1,11 @@
+/Users/mac/Desktop/BrightIdeas/bin/Debug/netcoreapp2.0/BrightIdeas.deps.json
+/Users/mac/Desktop/BrightIdeas/bin/Debug/netcoreapp2.0/BrightIdeas.runtimeconfig.json
+/Users/mac/Desktop/BrightIdeas/bin/Debug/netcoreapp2.0/BrightIdeas.runtimeconfig.dev.json
+/Users/mac/Desktop/BrightIdeas/bin/Debug/netcoreapp2.0/BrightIdeas.dll
+/Users/mac/Desktop/BrightIdeas/bin/Debug/netcoreapp2.0/BrightIdeas.pdb
+/Users/mac/Desktop/BrightIdeas/obj/Debug/netcoreapp2.0/BrightIdeas.csprojResolveAssemblyReference.cache
+/Users/mac/Desktop/BrightIdeas/obj/Debug/netcoreapp2.0/BrightIdeas.csproj.CoreCompileInputs.cache
+/Users/mac/Desktop/BrightIdeas/obj/Debug/netcoreapp2.0/BrightIdeas.AssemblyInfoInputs.cache
+/Users/mac/Desktop/BrightIdeas/obj/Debug/netcoreapp2.0/BrightIdeas.AssemblyInfo.cs
+/Users/mac/Desktop/BrightIdeas/obj/Debug/netcoreapp2.0/BrightIdeas.dll
+/Users/mac/Desktop/BrightIdeas/obj/Debug/netcoreapp2.0/BrightIdeas.pdb

@@ -1,0 +1,100 @@
+@model ViewModel
+
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <h4>Hi @ViewBag.CurrentUser.Alias ! </h4>
+  <a class="nav-link" href="/Logout">Logout</a>
+  
+</nav>
+
+<div class="container">
+
+
+            <table>
+          <form  asp-action="addIdea" asp-controller="Home" method="post">
+
+                <tr>
+                    @TempData["IdeaError"]
+                    <td><span asp-validation-for="Ideas.Content"></span></td>
+                </tr>
+                    
+                <tr>
+                    <td><textarea rows= '2' cols='73' name="content" asp-for="Ideas.Content" placeholder="Your idea here..."> </textarea></td>                     
+                </tr>
+                <tr>
+                    <td><button  class="btn btn-primary" type="submit" >Idea</button></td>
+                   
+                </tr>
+
+          </form>
+        </table>
+
+
+
+    <table class="table">
+
+
+        @foreach(var idea in ViewBag.allIdeas)
+        
+        {   
+            <tr>
+                
+                <td><a href="Profile/@idea.Creator.Id" > @idea.Creator.Alias </a> says: <div class="ideabox">@idea.Content<br> </div> <a href="LikeList/@idea.Id" > @idea.Likers.Count People</a> like this.
+                    
+                   
+
+                @if(ViewBag.CurrentUser == idea.Creator)
+                {
+                    <a href="DELETE/@idea.Id" > Delete</a>
+                }
+                else
+                {
+                    int Counter = 0;
+                    @foreach(var liker in @idea.Likers)
+                    {
+                        @if(liker.Liker == @ViewBag.CurrentUser)
+                        {
+                            Counter =1;
+                        }
+                    }
+
+                        @if(Counter ==1)
+                        {
+                            <b>You liked this idea!</b>
+                        }
+                        else
+                        {
+                            <a href="Like/@idea.Id">Like</a>
+                        }                      
+                }               
+                </td>
+            </tr>
+        }
+ 
+    </table>
+
+<style>
+    .ideabox
+    {
+        border: solid rgb(179, 179, 179) 1px;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
